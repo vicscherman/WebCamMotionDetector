@@ -1,2 +1,2 @@
 # WebCamMotionDetector
-a webcam motion detector app that uses openCV and facial recognition
+a webcam motion detector app that uses openCV to create movement logs
