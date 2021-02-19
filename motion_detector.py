@@ -8,6 +8,8 @@ motion_list =[None,None]
 times=[]
 df=pandas.DataFrame(columns=["Start", "End"])
 
+
+
 #frame counter
 frames=0
 
@@ -48,6 +50,9 @@ while True:
             cv2.rectangle(frame, (x,y), (x+w, y+h), (0,255,0), 3)
 
     motion_list.append(motion_detected)
+
+    #only last two motion list statuses in case the video is very long
+    motion_list = motion_list[-2:]
     
     if motion_list[-1]==1 and motion_list[-2]==0:
         times.append(datetime.now())
